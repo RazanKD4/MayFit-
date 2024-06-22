@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SleepActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sleep_maincardview"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_home_background3"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="72sp"
+        android:layout_marginTop="18dp"
+         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sleep_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="320sp"
+        android:layout_marginTop="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_info_bedtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="Your max bedtime is 10:00 PM"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/sleep_maincardview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_set_sleep_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/info_sleeptext"
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_bedtime"
+        android:layout_marginTop="60sp"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bed_grey"
+        app:layout_constraintTop_toBottomOf="@+id/tv_set_sleep_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="320sp"
+        android:layout_marginTop="38sp"
+        tools:layout_editor_absoluteX="34dp" />
+
+    <TextView
+        android:id="@+id/tv_example_bedtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="10:00 PM"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="130sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_set_sleep_time"
+        tools:layout_editor_absoluteX="112dp" />
+
+    <ImageView
+        android:id="@+id/img_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="120sp"
+        android:layout_marginEnd="320sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_set_sleep_time"
+        tools:layout_editor_absoluteX="37dp" />
+
+    <TextView
+        android:id="@+id/tv_example_wakeup_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="06:00 AM"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_example_bedtime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="130sp"
+        android:layout_marginTop="45sp"
+        tools:layout_editor_absoluteX="112dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

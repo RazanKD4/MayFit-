@@ -8,7 +8,7 @@
     tools:context=".premiumActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/gold_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
@@ -20,30 +20,90 @@
         tools:layout_editor_absoluteY="30dp"
         android:background="#00ddc0"/>
 
-    <TextView
-        android:id="@+id/textView3"
+    <GridLayout
+        android:id="@+id/personal_grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinslight"
-        android:text="Get personalized\nexercise routine..."
-        android:textAlignment="center"
-        android:textSize="25dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="245dp" />
+        android:layout_marginTop="20dp"
+        android:columnCount="2"
+        android:paddingStart="10dp"
+        android:rowCount="3"
+        android:paddingTop="4mm"
+        app:layout_constraintTop_toBottomOf="@id/gold_text">
 
-    <TextView
-        android:id="@+id/textView3"
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppinslight"
+            android:text="Get personalized\nexercise routine..."
+            android:textAlignment="center"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:id="@+id/personal_text"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8mm"
+            app:srcCompat="@drawable/img_forscw"/>
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/grid_recipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinslight"
-        android:text="hand-picked recipe\nfor your needs..."
-        android:textAlignment="center"
-        android:textSize="25dp"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="360dp" />
+        android:layout_marginTop="20dp"
+        android:columnCount="3"
+        android:paddingStart="10dp"
+        android:rowCount="3"
+        android:paddingTop="4mm"
+        app:layout_constraintTop_toBottomOf="@id/personal_grid">
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/detail_img_lunch2"
+            android:id="@+id/imageView2" />
+
+
+        <ImageView
+            android:id="@+id/recipe1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:rotation="20"
+            app:srcCompat="@drawable/detail_img_dinner1" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinslight"
+            android:text="hand-picked recipe\nfor your needs..."
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:layout_marginLeft="5mm"
+            tools:layout_editor_absoluteX="149dp"
+            android:id="@+id/recipe_text"
+            tools:layout_editor_absoluteY="360dp" />
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/ad_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnCount="2"
+        android:paddingStart="10dp"
+        android:rowCount="3"
+        android:paddingTop="4mm"
+        app:layout_constraintTop_toBottomOf="@id/grid_recipe">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/ad_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinslight"
@@ -53,46 +113,27 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="493dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/detail_img_lunch2"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="361dp" />
 
     <ImageView
-        android:id="@+id/recipe1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:rotation="20"
-        app:srcCompat="@drawable/detail_img_dinner1"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="369dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/img_forscw"
+        android:layout_width="100dp"
+        app:srcCompat="@drawable/ad_free"
         tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="235dp" />
-
-    <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/adFree"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="464dp" />
+        android:layout_marginLeft="21mm"/>
+
+    </GridLayout>
+
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
         android:text="Purchase Now!\nRp50.000/month"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="600dp" />
+        app:layout_constraintTop_toBottomOf="@id/ad_grid"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

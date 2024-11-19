@@ -17,17 +17,17 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnFoodselect.setOnClickListener{
-            startActivity(Intent(this, FoodActivity::class.java))
-        }
-        binding.btnDrinkMngr.setOnClickListener{
-            startActivity(Intent(this, WaterActivity::class.java))
-        }
+//        binding.btnFoodselect.setOnClickListener{
+//            startActivity(Intent(this, FoodActivity::class.java))
+//        }
+//        binding.btnDrinkMngr.setOnClickListener{
+//            startActivity(Intent(this, WaterActivity::class.java))
+//        }
         binding.btnWeightscale.setOnClickListener{
             startActivity(Intent(this, ScaleWeightActivity::class.java))
         }
         binding.btnSleepMngr.setOnClickListener{
-            startActivity(Intent(this, SleepActivity::class.java))
+            startActivity(Intent(this, premiumActivity::class.java))
         }
         binding.btnProgramInHome.setOnClickListener{
             startActivity(Intent(this, ProgramActivity::class.java))

@@ -23,11 +23,20 @@ class HomeActivity : AppCompatActivity() {
 //        binding.btnDrinkMngr.setOnClickListener{
 //            startActivity(Intent(this, WaterActivity::class.java))
 //        }
-        binding.btnWeightscale.setOnClickListener{
+
+        binding.tellProgram.setOnClickListener{
+            startActivity(Intent(this, WaterActivity::class.java))
+        }
+
+        binding.toPremiumBtn.setOnClickListener {
+        startActivity(Intent(this, premiumActivity::class.java))
+        }
+
+        binding.btnDailyGoals.setOnClickListener{
             startActivity(Intent(this, ScaleWeightActivity::class.java))
         }
-        binding.btnSleepMngr.setOnClickListener{
-            startActivity(Intent(this, premiumActivity::class.java))
+        binding.btnTargetFood.setOnClickListener{
+            startActivity(Intent(this, FoodActivity::class.java))
         }
         binding.btnProgramInHome.setOnClickListener{
             startActivity(Intent(this, ProgramActivity::class.java))
